@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi 8 - Praktik Membuat Proyek AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="halaman-materi">
+
+<header class="navbar">
+    <a href="/" class="logo">BOOTCAMP <span>AI.</span></a>
+    <a href="/" class="btn-kembali">Beranda</a>
+</header>
+
+<main class="materi-main">
+
+    <section class="materi-hero">
+        <div class="materi-hero-content">
+            <span class="materi-label">MATERI 08 · PRAKTIK PROYEK</span>
+            <h1>Saatnya Mengubah Ide Menjadi Proyek AI!</h1>
+            <p>
+                Sekarang bukan hanya belajar tentang AI.
+                Kamu akan mencoba merancang sebuah proyek sederhana
+                yang dapat membantu menyelesaikan masalah di sekitar kita.
+            </p>
+            <div class="materi-info">
+                <span>⏱️ 30–45 Menit</span>
+                <span>🚀 Praktik Langsung</span>
+            </div>
+        </div>
+
+        <div class="materi-hero-visual">
+            <div class="materi-hero-emoji">🚀</div>
+            <div class="materi-floating">✨ Build Your Idea</div>
+        </div>
+    </section>
+
+    <section class="tujuan-card">
+        <h2>🎯 Tujuan Pembelajaran</h2>
+        <p>Setelah mengikuti materi ini, peserta mampu:</p>
+        <ul>
+            <li>Menentukan masalah yang dapat dibantu dengan AI.</li>
+            <li>Mengembangkan ide menjadi rancangan proyek.</li>
+            <li>Membuat prompt sesuai kebutuhan proyek.</li>
+            <li>Menilai hasil dan manfaat proyek yang dirancang.</li>
+        </ul>
+    </section>
+
+    <section class="isi-materi">
+        <div class="materi-heading">
+            <span class="materi-label">MULAI DARI IDE</span>
+            <h2>Bagaimana Membuat Proyek AI?</h2>
+            <p>
+                Proyek AI tidak harus rumit. Kita bisa memulainya dari
+                masalah sederhana yang sering ditemukan dalam kehidupan
+                sehari-hari.
+            </p>
+        </div>
+
+        <div class="alur-ai">
+            <div class="alur-card">
+                <h3>01. Temukan Masalah</h3>
+                <p>Tentukan masalah yang ingin diselesaikan.</p>
+            </div>
+            <div class="alur-arrow">→</div>
+            <div class="alur-card">
+                <h3>02. Buat Ide</h3>
+                <p>Pikirkan solusi yang bisa dibantu oleh AI.</p>
+            </div>
+            <div class="alur-arrow">→</div>
+            <div class="alur-card">
+                <h3>03. Rancang Proyek</h3>
+                <p>Tentukan tujuan dan cara kerja proyek.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="isi-materi">
+        <div class="materi-heading">
+            <span class="materi-label">INSPIRASI PROYEK</span>
+            <h2>Contoh Proyek Sederhana dengan AI</h2>
+        </div>
+
+        <div class="contoh-ai">
+            <div class="contoh-card">
+                <div class="contoh-icon">📚</div>
+                <h3>Asisten Belajar</h3>
+                <p>Membantu membuat rangkuman dan latihan soal dari materi pelajaran.</p>
+            </div>
+
+            <div class="contoh-card">
+                <div class="contoh-icon">🎨</div>
+                <h3>Desain Kreatif</h3>
+                <p>Mengembangkan ide poster atau ilustrasi menggunakan alat AI.</p>
+            </div>
+
+            <div class="contoh-card">
+                <div class="contoh-icon">🌱</div>
+                <h3>Kampanye Lingkungan</h3>
+                <p>Membuat konsep kampanye edukasi tentang kebersihan lingkungan.</p>
+            </div>
+
+            <div class="contoh-card">
+                <div class="contoh-icon">💬</div>
+                <h3>Asisten Informasi</h3>
+                <p>Menyusun konsep chatbot untuk menjawab pertanyaan umum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="isi-materi">
+        <div class="materi-heading">
+            <span class="materi-label">PRAKTIK INTERAKTIF</span>
+            <h2>AI Project Builder</h2>
+            <p>
+                Buat rancangan proyekmu sendiri dengan mengisi informasi
+                berikut. Hasilnya dapat kamu gunakan sebagai panduan awal.
+            </p>
+        </div>
+
+        <div class="penjelasan-card">
+            <label for="judulProyek"><strong>1. Nama proyek</strong></label>
+            <input type="text" id="judulProyek"
+                   placeholder="Contoh: Asisten Belajar Pintar">
+
+            <label for="jenisProyek"><strong>2. Jenis proyek</strong></label>
+            <select id="jenisProyek">
+                <option value="Pendidikan">Pendidikan</option>
+                <option value="Desain dan Kreativitas">Desain dan Kreativitas</option>
+                <option value="Lingkungan">Lingkungan</option>
+                <option value="Teknologi dan Informasi">Teknologi dan Informasi</option>
+            </select>
+
+            <label for="masalahProyek"><strong>3. Masalah yang ingin diselesaikan</strong></label>
+            <textarea id="masalahProyek" rows="3"
+                placeholder="Tuliskan masalah yang ingin kamu bantu selesaikan..."></textarea>
+
+            <label for="solusiProyek"><strong>4. Ide solusi menggunakan AI</strong></label>
+            <textarea id="solusiProyek" rows="3"
+                placeholder="Jelaskan bagaimana AI dapat membantu..."></textarea>
+
+            <button type="button" onclick="buatProyek()">
+                Buat Rancangan Proyek
+            </button>
+
+            <div id="hasilProyek" class="highlight-materi" style="display:none;"></div>
+            <button id="tombolSalinProyek" type="button"
+                    onclick="salinRancangan()" style="display:none;">
+                Salin Rancangan
+            </button>
+            <p id="statusProyek"></p>
+        </div>
+    </section>
+
+    <section class="isi-materi">
+        <div class="materi-heading">
+            <span class="materi-label">TIPS PENGEMBANGAN</span>
+            <h2>Jangan Berhenti pada Ide</h2>
+        </div>
+
+        <div class="penjelasan-card">
+            <h3>💡 Hal yang Perlu Diperhatikan</h3>
+            <ul>
+                <li>Pastikan proyek memiliki tujuan yang jelas.</li>
+                <li>Gunakan AI sebagai alat bantu, bukan pengganti pemikiran sendiri.</li>
+                <li>Periksa kembali informasi dan hasil yang diberikan AI.</li>
+                <li>Uji rancangan proyek dan perbaiki jika masih ada kekurangan.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="kuis-section">
+        <div class="kuis-heading">
+            <span class="materi-label">UJI PEMAHAMAN</span>
+            <h2>Mini Quiz Materi 8</h2>
+            <p>Periksa pemahamanmu tentang pembuatan proyek AI.</p>
+        </div>
+
+        <div class="pertanyaan-card">
+            <p><strong>1. Apa langkah awal membuat proyek AI?</strong></p>
+            <label><input type="radio" name="q1" value="A"> Membeli perangkat baru</label>
+            <label><input type="radio" name="q1" value="B"> Menemukan masalah yang ingin diselesaikan</label>
+            <label><input type="radio" name="q1" value="C"> Langsung mempublikasikan proyek</label>
+        </div>
+
+        <div class="pertanyaan-card">
+            <p><strong>2. Apa fungsi AI dalam sebuah proyek?</strong></p>
+            <label><input type="radio" name="q2" value="A"> Membantu proses sesuai kebutuhan proyek</label>
+            <label><input type="radio" name="q2" value="B"> Menghilangkan seluruh peran manusia</label>
+            <label><input type="radio" name="q2" value="C"> Menjamin semua proyek berhasil</label>
+        </div>
+
+        <div class="pertanyaan-card">
+            <p><strong>3. Mengapa proyek perlu diuji?</strong></p>
+            <label><input type="radio" name="q3" value="A"> Agar tidak perlu diperbaiki</label>
+            <label><input type="radio" name="q3" value="B"> Agar bisa langsung dijual</label>
+            <label><input type="radio" name="q3" value="C"> Untuk mengetahui kekurangan dan memperbaikinya</label>
+        </div>
+
+        <button type="button" onclick="hitungNilai()">Periksa Jawaban</button>
+        <div id="hasilNilai"></div>
+    </section>
+
+    <section class="navigasi-materi">
+        <a href="/materi7" class="btn-kembali">← Materi Sebelumnya</a>
+        <button type="button" onclick="tandaiSelesai(8, '/materi9')">
+            Selesaikan Materi 8 →
+        </button>
+    </section>
+
+</main>
+
+<script>
+let teksRancangan = "";
+
+function buatProyek() {
+    const judul = document.getElementById("judulProyek").value.trim();
+    const jenis = document.getElementById("jenisProyek").value;
+    const masalah = document.getElementById("masalahProyek").value.trim();
+    const solusi = document.getElementById("solusiProyek").value.trim();
+
+    if (!judul || !masalah || !solusi) {
+        alert("Lengkapi semua informasi proyek terlebih dahulu.");
+        return;
+    }
+
+    teksRancangan =
+        "RANCANGAN PROYEK AI\n\n" +
+        "Nama Proyek: " + judul + "\n" +
+        "Kategori: " + jenis + "\n" +
+        "Masalah: " + masalah + "\n" +
+        "Ide Solusi: " + solusi + "\n\n" +
+        "Tujuan: Mengembangkan solusi berbantuan AI untuk membantu mengatasi masalah tersebut.";
+
+    document.getElementById("hasilProyek").style.display = "block";
+    document.getElementById("hasilProyek").textContent = teksRancangan;
+    document.getElementById("tombolSalinProyek").style.display = "inline-block";
+    document.getElementById("statusProyek").textContent =
+        "Rancangan berhasil dibuat! Kamu dapat menyalinnya.";
+}
+
+function salinRancangan() {
+    if (!teksRancangan) return;
+
+    const status = document.getElementById("statusProyek");
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(teksRancangan)
+            .then(() => status.textContent = "Rancangan berhasil disalin!")
+            .catch(() => status.textContent = "Silakan salin rancangan secara manual.");
+    } else {
+        status.textContent = "Silakan salin rancangan secara manual.";
+    }
+}
+
+function hitungNilai() {
+    const kunci = {
+        q1: "B",
+        q2: "A",
+        q3: "C"
+    };
+
+    let benar = 0;
+
+    for (let nomor in kunci) {
+        const jawaban = document.querySelector(
+            'input[name="' + nomor + '"]:checked'
+        );
+
+        if (jawaban && jawaban.value === kunci[nomor]) {
+            benar++;
+        }
+    }
+
+    document.getElementById("hasilNilai").innerHTML =
+        "Jawaban benar: " + benar + " dari 3 soal.<br>" +
+        "Nilai kamu: " + Math.round((benar / 3) * 100);
+}
+
+function tandaiSelesai(nomor, tujuan) {
+    let selesai = JSON.parse(localStorage.getItem("materiSelesai")) || [];
+
+    if (!selesai.includes(nomor)) {
+        selesai.push(nomor);
+        localStorage.setItem("materiSelesai", JSON.stringify(selesai));
+    }
+
+    window.location.href = tujuan;
+}
+</script>
+
+</body>
+</html>

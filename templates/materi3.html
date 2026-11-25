@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi 3 - Bootcamp AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="halaman-materi">
+
+    <header class="navbar">
+        <h2>BOOTCAMP AI</h2>
+        <nav>
+            <a href="/">Beranda</a>
+            <a href="/#materi">Materi</a>
+            <a href="/#tentang">Tentang</a>
+        </nav>
+    </header>
+
+    <main class="materi-main">
+
+        <!-- HERO -->
+        <section class="materi-hero">
+            <div class="materi-hero-content">
+                <span class="materi-label">LEARNING MODULE 03</span>
+                <h1>Praktik Menggunakan <span>Artificial Intelligence</span></h1>
+                <p>
+                    Belajar memberikan instruksi yang tepat kepada AI
+                    melalui teknik membuat prompt yang jelas, terarah,
+                    dan sesuai kebutuhan.
+                </p>
+
+                <div class="materi-info">
+                    <span>💻 Praktik Langsung</span>
+                    <span>⏱️ 20 Menit</span>
+                    <span>📝 5 Pertanyaan</span>
+                </div>
+            </div>
+
+            <div class="materi-hero-visual">
+                <div class="materi-hero-orbit"></div>
+                <div class="materi-hero-emoji">💬</div>
+                <span class="materi-floating">✨</span>
+            </div>
+        </section>
+
+        <!-- TUJUAN -->
+        <section class="tujuan-card">
+            <div class="tujuan-icon">🎯</div>
+            <div>
+                <h2>Tujuan Pembelajaran</h2>
+                <p>Setelah mempelajari materi ini, kamu diharapkan mampu:</p>
+                <ul>
+                    <li>Memahami pengertian prompt.</li>
+                    <li>Mengenali ciri-ciri prompt yang baik.</li>
+                    <li>Membuat prompt sesuai kebutuhan.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PENGERTIAN PROMPT -->
+        <section class="isi-materi">
+            <div class="materi-heading">
+                <span class="materi-label">BAGIAN 01</span>
+                <h2>Apa Itu Prompt?</h2>
+                <p>Mengenal dasar komunikasi antara manusia dan AI.</p>
+            </div>
+
+            <div class="penjelasan-card">
+                <div class="penjelasan-icon">💡</div>
+                <div>
+                    <h3>Pengertian Prompt</h3>
+                    <p>
+                        Prompt adalah instruksi atau perintah yang diberikan
+                        kepada AI untuk menghasilkan jawaban atau melakukan
+                        tugas tertentu.
+                    </p>
+                    <p>
+                        Semakin jelas prompt yang diberikan, semakin mudah
+                        AI memahami kebutuhan pengguna dan memberikan
+                        jawaban yang sesuai.
+                    </p>
+                    <div class="highlight-materi">
+                        <strong>Ingat!</strong> Prompt yang baik membantu AI
+                        memahami apa yang kamu inginkan.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CIRI PROMPT -->
+        <section class="isi-materi">
+            <div class="materi-heading">
+                <span class="materi-label">BAGIAN 02</span>
+                <h2>Ciri-Ciri Prompt yang Baik</h2>
+                <p>Perhatikan beberapa hal berikut ketika menulis prompt.</p>
+            </div>
+
+            <div class="alur-ai">
+                <div class="alur-card">
+                    <div class="alur-icon">🎯</div>
+                    <h3>Tujuan Jelas</h3>
+                    <p>Menjelaskan tugas atau hasil yang ingin diperoleh.</p>
+                </div>
+
+                <div class="alur-card">
+                    <div class="alur-icon">✍️</div>
+                    <h3>Bahasa Mudah</h3>
+                    <p>Menggunakan kalimat yang sederhana dan mudah dipahami.</p>
+                </div>
+
+                <div class="alur-card">
+                    <div class="alur-icon">📚</div>
+                    <h3>Memiliki Konteks</h3>
+                    <p>Memberikan informasi yang membantu AI memahami situasi.</p>
+                </div>
+
+                <div class="alur-card">
+                    <div class="alur-icon">📋</div>
+                    <h3>Format Jawaban</h3>
+                    <p>Menjelaskan bentuk jawaban yang diinginkan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTOH PROMPT -->
+        <section class="isi-materi">
+            <div class="materi-heading">
+                <span class="materi-label">BAGIAN 03</span>
+                <h2>Contoh Prompt</h2>
+                <p>Bandingkan dua contoh berikut untuk memahami perbedaannya.</p>
+            </div>
+
+            <div class="contoh-ai">
+                <div class="contoh-card">
+                    <div class="contoh-icon">❌</div>
+                    <h3>Prompt Kurang Jelas</h3>
+                    <p>"Jelaskan tentang AI."</p>
+                    <div class="highlight-materi">
+                        Instruksi masih terlalu umum dan belum menjelaskan
+                        informasi yang dibutuhkan.
+                    </div>
+                </div>
+
+                <div class="contoh-card">
+                    <div class="contoh-icon">✅</div>
+                    <h3>Prompt Lebih Baik</h3>
+                    <p>
+                        "Jelaskan pengertian Artificial Intelligence (AI)
+                        menggunakan bahasa sederhana untuk siswa SMA.
+                        Berikan tiga contoh penerapannya dalam kehidupan sehari-hari."
+                    </p>
+                    <div class="highlight-materi">
+                        Instruksi lebih jelas karena memiliki tujuan,
+                        sasaran pembaca, dan bentuk jawaban.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRAKTIK PROMPT -->
+        <section class="isi-materi">
+            <div class="materi-heading">
+                <span class="materi-label">BAGIAN 04</span>
+                <h2>Praktik Membuat Prompt</h2>
+                <p>Sekarang waktunya mencoba membuat instruksi AI versimu sendiri!</p>
+            </div>
+
+            <div class="penjelasan-card">
+                <div class="penjelasan-icon">🚀</div>
+                <div>
+                    <h3>Ruang Praktik Prompt</h3>
+                    <p>
+                        Bayangkan kamu ingin meminta AI membantu
+                        menyelesaikan suatu tugas. Tuliskan instruksi
+                        yang jelas pada kolom di bawah ini.
+                    </p>
+                </div>
+            </div>
+
+            <div class="kuis-section">
+                <h3>✍️ Tulis Prompt Kamu</h3>
+                <p>
+                    Contoh: Buatkan ringkasan tentang teknologi AI
+                    menggunakan bahasa sederhana untuk pelajar.
+                </p>
+
+                <textarea
+                    id="promptSaya"
+                    rows="5"
+                    placeholder="Tuliskan prompt kamu di sini..."
+                ></textarea>
+
+                <button type="button" class="btn-kuis" onclick="tampilkanPrompt()">
+                    Tampilkan Prompt →
+                </button>
+
+                <div class="hasil-kuis">
+                    <h3>Hasil Prompt Kamu:</h3>
+                    <p id="hasilPrompt">
+                        Prompt yang kamu tulis akan muncul di sini.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KUIS -->
+        <section class="kuis-section">
+            <div class="kuis-heading">
+                <span class="materi-label">TEST YOUR KNOWLEDGE</span>
+                <h2>📝 Kuis Pemahaman</h2>
+                <p>Jawablah lima pertanyaan untuk menguji pemahamanmu!</p>
+            </div>
+
+            <form id="formKuis">
+
+                <div class="pertanyaan-card">
+                    <h3>1. Apa yang dimaksud dengan prompt?</h3>
+                    <label><input type="radio" name="q1" value="A"> Instruksi yang diberikan kepada AI</label>
+                    <label><input type="radio" name="q1" value="B"> Nama perangkat komputer</label>
+                    <label><input type="radio" name="q1" value="C"> Aplikasi untuk menggambar</label>
+                </div>
+
+                <div class="pertanyaan-card">
+                    <h3>2. Mengapa prompt harus jelas?</h3>
+                    <label><input type="radio" name="q2" value="A"> Agar komputer mati</label>
+                    <label><input type="radio" name="q2" value="B"> Agar AI memahami kebutuhan pengguna</label>
+                    <label><input type="radio" name="q2" value="C"> Agar internet menjadi cepat</label>
+                </div>
+
+                <div class="pertanyaan-card">
+                    <h3>3. Manakah contoh prompt yang lebih baik?</h3>
+                    <label><input type="radio" name="q3" value="A"> Buat sesuatu.</label>
+                    <label><input type="radio" name="q3" value="B"> Jelaskan.</label>
+                    <label><input type="radio" name="q3" value="C"> Jelaskan pengertian AI dengan bahasa sederhana dan berikan contohnya.</label>
+                </div>
+
+                <div class="pertanyaan-card">
+                    <h3>4. Apa yang sebaiknya diberikan dalam prompt?</h3>
+                    <label><input type="radio" name="q4" value="A"> Konteks dan tujuan yang jelas</label>
+                    <label><input type="radio" name="q4" value="B"> Informasi yang tidak berhubungan</label>
+                    <label><input type="radio" name="q4" value="C"> Kata-kata acak</label>
+                </div>
+
+                <div class="pertanyaan-card">
+                    <h3>5. Jika hasil AI belum sesuai, apa yang dapat dilakukan?</h3>
+                    <label><input type="radio" name="q5" value="A"> Langsung menyerah</label>
+                    <label><input type="radio" name="q5" value="B"> Memperjelas atau memperbaiki prompt</label>
+                    <label><input type="radio" name="q5" value="C"> Menghapus semua file</label>
+                </div>
+
+                <button type="button" class="btn-kuis" onclick="hitungNilai()">
+                    Periksa Jawaban →
+                </button>
+
+            </form>
+
+            <div class="hasil-kuis">
+                <h2 id="hasilNilai"></h2>
+                <p id="pesanNilai"></p>
+            </div>
+        </section>
+
+        <!-- NAVIGASI -->
+<div class="navigasi-materi">
+    <a href="/materi2" class="btn-kembali">← Materi Sebelumnya</a>
+
+    <button type="button" class="btn-lanjut" onclick="tandaiSelesai(3, '/materi4')">
+        Tandai Selesai ✓
+    </button>
+
+    <a href="/materi4" class="btn-lanjut">Materi Berikutnya →</a>
+</div>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Bootcamp AI | Belajar, Berinovasi, Berkarya</p>
+    </footer>
+
+   
+<script>
+    function tampilkanPrompt() {
+        let prompt = document.getElementById("promptSaya").value;
+
+        if (prompt.trim() === "") {
+            alert("Silakan tulis prompt terlebih dahulu!");
+            return;
+        }
+
+        document.getElementById("hasilPrompt").innerText = prompt;
+    }
+
+    function hitungNilai() {
+        const kunci = {
+            q1: "A",
+            q2: "B",
+            q3: "C",
+            q4: "A",
+            q5: "B"
+        };
+
+        let benar = 0;
+
+        for (let nomor in kunci) {
+            let jawaban = document.querySelector(
+                'input[name="' + nomor + '"]:checked'
+            );
+
+            if (jawaban === null) {
+                alert("Silakan jawab semua pertanyaan terlebih dahulu!");
+                return;
+            }
+
+            if (jawaban.value === kunci[nomor]) {
+                benar++;
+            }
+        }
+
+        let nilai = benar * 20;
+
+        document.getElementById("hasilNilai").innerHTML =
+            "Nilai Akhir: " + nilai;
+
+        if (nilai >= 80) {
+            document.getElementById("pesanNilai").innerHTML =
+                "Hebat! Kamu sudah memahami materi dengan baik.";
+        } else if (nilai >= 60) {
+            document.getElementById("pesanNilai").innerHTML =
+                "Bagus! Terus tingkatkan pemahamanmu.";
+        } else {
+            document.getElementById("pesanNilai").innerHTML =
+                "Yuk, pelajari kembali materi dan coba lagi!";
+        }
+    }
+
+    function tandaiSelesai(nomor, halamanBerikutnya) {
+        let selesai = JSON.parse(
+            localStorage.getItem("materiSelesai") || "[]"
+        );
+
+        if (!selesai.includes(nomor)) {
+            selesai.push(nomor);
+            localStorage.setItem("materiSelesai", JSON.stringify(selesai));
+        }
+
+        alert("Materi 3 berhasil ditandai selesai!");
+
+        window.location.href = halamanBerikutnya;
+    }
+</script>
+
+
+</body>
+</html>

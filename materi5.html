@@ -1,26 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi 5 - Bootcamp AI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body class="halaman-materi">
 
     <header class="navbar">
         <h2>BOOTCAMP AI</h2>
         <nav>
-            <a href="/">Beranda</a>
-            <a href="/#materi">Materi</a>
-            <a href="/#tentang">Tentang</a>
+            <a href="index.html">Beranda</a>
+            <a href="index.html#materi">Materi</a>
+            <a href="index.html#tentang">Tentang</a>
         </nav>
     </header>
 
     <main class="materi-main">
 
-        <!-- HERO -->
         <section class="materi-hero">
             <div class="materi-hero-content">
                 <span class="materi-label">LEARNING MODULE 05</span>
@@ -45,7 +43,6 @@
             </div>
         </section>
 
-        <!-- TUJUAN -->
         <section class="tujuan-card">
             <div class="tujuan-icon">🎯</div>
             <div>
@@ -59,7 +56,6 @@
             </div>
         </section>
 
-        <!-- PENGERTIAN -->
         <section class="isi-materi">
             <div class="materi-heading">
                 <span class="materi-label">BAGIAN 01</span>
@@ -92,7 +88,6 @@
             </div>
         </section>
 
-        <!-- PRINSIP ETIKA -->
         <section class="isi-materi">
             <div class="materi-heading">
                 <span class="materi-label">BAGIAN 02</span>
@@ -142,7 +137,6 @@
             </div>
         </section>
 
-        <!-- CONTOH PENGGUNAAN BIJAK -->
         <section class="isi-materi">
             <div class="materi-heading">
                 <span class="materi-label">BAGIAN 03</span>
@@ -183,7 +177,6 @@
             </div>
         </section>
 
-        <!-- STUDI KASUS -->
         <section class="isi-materi">
             <div class="materi-heading">
                 <span class="materi-label">BAGIAN 04</span>
@@ -218,7 +211,6 @@
             </div>
         </section>
 
-        <!-- KUIS -->
         <section class="kuis-section">
             <div class="kuis-heading">
                 <span class="materi-label">FINAL KNOWLEDGE TEST</span>
@@ -227,7 +219,6 @@
             </div>
 
             <form id="formKuis">
-
                 <div class="pertanyaan-card">
                     <h3>1. Apa tujuan utama etika penggunaan AI?</h3>
                     <label><input type="radio" name="q1" value="A"> Menggunakan AI tanpa aturan</label>
@@ -266,7 +257,6 @@
                 <button type="button" class="btn-kuis" onclick="hitungNilai()">
                     Periksa Jawaban →
                 </button>
-
             </form>
 
             <div class="hasil-kuis">
@@ -275,7 +265,6 @@
             </div>
         </section>
 
-        <!-- PENUTUP -->
         <section class="tujuan-card">
             <div class="tujuan-icon">🏆</div>
             <div>
@@ -293,17 +282,15 @@
             </div>
         </section>
 
-       
-<!-- NAVIGASI -->
-<div class="navigasi-materi">
-    <a href="/materi4" class="btn-kembali">← Materi Sebelumnya</a>
+        <div class="navigasi-materi">
+            <a href="materi4.html" class="btn-kembali">← Materi Sebelumnya</a>
 
-    <button type="button" class="btn-lanjut" onclick="tandaiSelesai(5, '/')">
-        Tandai Selesai ✓
-    </button>
+            <button type="button" class="btn-lanjut" onclick="tandaiSelesai(5, 'materi6.html')">
+                Tandai Selesai ✓
+            </button>
 
-    <a href="/" class="btn-lanjut">Kembali ke Beranda →</a>
-</div>
+            <a href="materi6.html" class="btn-lanjut">Materi Berikutnya →</a>
+        </div>
 
     </main>
 
@@ -311,66 +298,44 @@
         <p>© 2026 Bootcamp AI | Belajar, Berinovasi, Berkarya</p>
     </footer>
 
-   
-<script>
+    <script>
     function hitungNilai() {
-        const kunci = {
-            q1: "B",
-            q2: "C",
-            q3: "A",
-            q4: "B",
-            q5: "A"
-        };
-
+        const kunci = { q1: "B", q2: "C", q3: "A", q4: "B", q5: "A" };
         let benar = 0;
 
         for (let nomor in kunci) {
-            let jawaban = document.querySelector(
-                'input[name="' + nomor + '"]:checked'
-            );
-
+            let jawaban = document.querySelector('input[name="' + nomor + '"]:checked');
             if (jawaban === null) {
                 alert("Silakan jawab semua pertanyaan terlebih dahulu!");
                 return;
             }
-
             if (jawaban.value === kunci[nomor]) {
                 benar++;
             }
         }
 
         let nilai = benar * 20;
-
-        document.getElementById("hasilNilai").innerHTML =
-            "Nilai Akhir: " + nilai;
+        document.getElementById("hasilNilai").innerHTML = "Nilai Akhir: " + nilai;
 
         if (nilai >= 80) {
-            document.getElementById("pesanNilai").innerHTML =
-                "Hebat! Kamu sudah memahami etika penggunaan AI.";
+            document.getElementById("pesanNilai").innerHTML = "Hebat! Kamu sudah memahami etika penggunaan AI.";
         } else if (nilai >= 60) {
-            document.getElementById("pesanNilai").innerHTML =
-                "Bagus! Terus tingkatkan pemahamanmu.";
+            document.getElementById("pesanNilai").innerHTML = "Bagus! Terus tingkatkan pemahamanmu.";
         } else {
-            document.getElementById("pesanNilai").innerHTML =
-                "Yuk, pelajari kembali materi dan coba lagi!";
+            document.getElementById("pesanNilai").innerHTML = "Yuk, pelajari kembali materi dan coba lagi!";
         }
     }
 
     function tandaiSelesai(nomor, halamanBerikutnya) {
-        let selesai = JSON.parse(
-            localStorage.getItem("materiSelesai") || "[]"
-        );
-
+        let selesai = JSON.parse(localStorage.getItem("materiSelesai") || "[]");
         if (!selesai.includes(nomor)) {
             selesai.push(nomor);
             localStorage.setItem("materiSelesai", JSON.stringify(selesai));
         }
-
-        alert("Selamat! Kamu telah menyelesaikan seluruh materi Bootcamp AI!");
-
+        alert("Materi 5 berhasil ditandai selesai!");
         window.location.href = halamanBerikutnya;
     }
-</script>
+    </script>
 
 </body>
 </html>

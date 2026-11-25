@@ -1,13 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sertifikat Bootcamp AI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body class="halaman-materi">
+
+    <header class="navbar">
+        <a href="index.html" class="logo">BOOTCAMP <span>AI.</span></a>
+        <a href="index.html" class="btn-kembali">Beranda</a>
+    </header>
 
     <main class="materi-main">
         <section class="tujuan-card">
@@ -27,28 +31,28 @@
 
         <section id="hasilSertifikat" class="sertifikat" style="display:none;">
             <div class="sertifikat-border">
-               <div class="sertifikat-logo">
-    <div class="logo-icon">✦</div>
-    <span>BOOTCAMP <b>AI.</b></span>
-</div>
+                <div class="sertifikat-logo">
+                    <div class="logo-icon">✦</div>
+                    <span>BOOTCAMP <b>AI.</b></span>
+                </div>
 
-<p class="sertifikat-label">CERTIFICATE OF COMPLETION</p>
-<h1>SERTIFIKAT</h1>
+                <p class="sertifikat-label">CERTIFICATE OF COMPLETION</p>
+                <h1>SERTIFIKAT</h1>
                 <h2>PENYELESAIAN PEMBELAJARAN</h2>
 
                 <p class="sertifikat-diberikan">Diberikan kepada:</p>
                 <h2 id="namaHasil" class="nama-sertifikat"></h2>
 
-               <p>
-                Sebagai bentuk apresiasi atas keberhasilan
-                menyelesaikan 10 materi pembelajaran Bootcamp AI.
-            </p>
+                <p>
+                    Sebagai bentuk apresiasi atas keberhasilan
+                    menyelesaikan 10 materi pembelajaran Bootcamp AI.
+                </p>
 
                 <h3>Belajar, Berinovasi, Berkarya</h3>
-              <div class="sertifikat-footer">
-    <p class="sertifikat-tanggal" id="tanggalSertifikat"></p>
-    <p class="nomor-sertifikat" id="nomorSertifikat"></p>
-</div>
+                <div class="sertifikat-footer">
+                    <p class="sertifikat-tanggal" id="tanggalSertifikat"></p>
+                    <p class="nomor-sertifikat" id="nomorSertifikat"></p>
+                </div>
             </div>
 
             <button class="btn-kuis" onclick="window.print()">
@@ -70,10 +74,10 @@
                 localStorage.getItem("materiSelesai") || "[]"
             );
 
-           if ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].some(nomor => !selesai.includes(nomor))) {
-    alert("Selesaikan seluruh 10 materi terlebih dahulu!");
-    return;
-}
+            if ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].some(nomor => !selesai.includes(nomor))) {
+                alert("Selesaikan seluruh 10 materi terlebih dahulu!");
+                return;
+            }
 
             document.getElementById("namaHasil").innerText = nama;
 
@@ -84,7 +88,7 @@
                     month: "long",
                     year: "numeric"
                 });
-                
+
             document.getElementById("nomorSertifikat").innerText =
                 "No. Sertifikat: BAI-" +
                 Date.now().toString().slice(-8);

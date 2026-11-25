@@ -1,28 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materi 1 - Bootcamp AI</title>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body class="halaman-materi">
 
-    <!-- NAVBAR -->
     <header class="navbar">
         <h2>BOOTCAMP <span>AI.</span></h2>
         <nav>
-            <a href="/">Beranda</a>
-            <a href="/#materi">Materi</a>
-            <a href="/#tentang">Tentang</a>
+            <a href="index.html">Beranda</a>
+            <a href="index.html#materi">Materi</a>
+            <a href="index.html#tentang">Tentang</a>
         </nav>
     </header>
 
     <main class="materi-main">
 
-        <!-- HERO MATERI -->
         <section class="materi-hero">
             <div class="materi-hero-content">
                 <span class="materi-label">LEARNING MODULE 01</span>
@@ -47,7 +43,6 @@
             </div>
         </section>
 
-        <!-- TUJUAN PEMBELAJARAN -->
         <section class="tujuan-card">
             <div class="tujuan-icon">🎯</div>
             <div>
@@ -62,7 +57,6 @@
             </div>
         </section>
 
-        <!-- MATERI 1 -->
         <section class="isi-materi">
             <div class="materi-heading">
                 <span class="materi-label">01 — BASIC KNOWLEDGE</span>
@@ -95,7 +89,6 @@
             </div>
         </section>
 
-        <!-- CARA KERJA AI -->
         <section class="isi-materi">
             <div class="materi-heading">
                 <span class="materi-label">02 — HOW IT WORKS</span>
@@ -128,7 +121,6 @@
             </div>
         </section>
 
-        <!-- CONTOH AI -->
         <section class="isi-materi">
             <div class="materi-heading">
                 <span class="materi-label">03 — AI IN DAILY LIFE</span>
@@ -160,7 +152,6 @@
             </div>
         </section>
 
-        <!-- KUIS -->
         <section class="kuis-section">
             <div class="kuis-heading">
                 <span class="materi-label">TEST YOUR KNOWLEDGE</span>
@@ -169,7 +160,6 @@
             </div>
 
             <form id="formKuis">
-
                 <div class="pertanyaan-card">
                     <h3>01. Apa kepanjangan AI?</h3>
                     <label><input type="radio" name="q1" value="A"> Artificial Intelligence</label>
@@ -208,7 +198,6 @@
                 <button type="button" class="btn-kuis" onclick="hitungNilai()">
                     Periksa Jawaban →
                 </button>
-
             </form>
 
             <div class="hasil-kuis">
@@ -217,18 +206,15 @@
             </div>
         </section>
 
-        
-<!-- NAVIGASI -->
-<div class="navigasi-materi">
-    <a href="/" class="btn-kembali">← Kembali ke Beranda</a>
+        <div class="navigasi-materi">
+            <a href="index.html" class="btn-kembali">← Kembali ke Beranda</a>
 
-    <button type="button" class="btn-lanjut" onclick="tandaiSelesai(1, '/materi2')">
-        Tandai Selesai ✓
-    </button>
+            <button type="button" class="btn-lanjut" onclick="tandaiSelesai(1, 'materi2.html')">
+                Tandai Selesai ✓
+            </button>
 
-    <a href="/materi2" class="btn-lanjut">Materi Berikutnya →</a>
-</div>
-
+            <a href="materi2.html" class="btn-lanjut">Materi Berikutnya →</a>
+        </div>
 
     </main>
 
@@ -238,65 +224,42 @@
 
     <script>
     function hitungNilai() {
-        const kunci = {
-            q1: "A",
-            q2: "B",
-            q3: "C",
-            q4: "A",
-            q5: "B"
-        };
-
+        const kunci = { q1: "A", q2: "B", q3: "C", q4: "A", q5: "B" };
         let benar = 0;
 
         for (let nomor in kunci) {
-            let jawaban = document.querySelector(
-                'input[name="' + nomor + '"]:checked'
-            );
-
+            let jawaban = document.querySelector('input[name="' + nomor + '"]:checked');
             if (jawaban === null) {
                 alert("Silakan jawab semua pertanyaan terlebih dahulu!");
                 return;
             }
-
             if (jawaban.value === kunci[nomor]) {
                 benar++;
             }
         }
 
         let nilai = benar * 20;
-
-        document.getElementById("hasilNilai").innerHTML =
-            "Nilai Akhir: " + nilai;
+        document.getElementById("hasilNilai").innerHTML = "Nilai Akhir: " + nilai;
 
         if (nilai >= 80) {
-            document.getElementById("pesanNilai").innerHTML =
-                "Hebat! Kamu sudah memahami materi AI dengan baik.";
+            document.getElementById("pesanNilai").innerHTML = "Hebat! Kamu sudah memahami materi AI dengan baik.";
         } else if (nilai >= 60) {
-            document.getElementById("pesanNilai").innerHTML =
-                "Bagus! Terus tingkatkan pemahamanmu.";
+            document.getElementById("pesanNilai").innerHTML = "Bagus! Terus tingkatkan pemahamanmu.";
         } else {
-            document.getElementById("pesanNilai").innerHTML =
-                "Yuk, pelajari kembali materi dan coba lagi!";
+            document.getElementById("pesanNilai").innerHTML = "Yuk, pelajari kembali materi dan coba lagi!";
         }
     }
 
-function tandaiSelesai(nomor, halamanBerikutnya) {
-    let selesai = JSON.parse(
-        localStorage.getItem("materiSelesai") || "[]"
-    );
-
-    if (!selesai.includes(nomor)) {
-        selesai.push(nomor);
-        localStorage.setItem("materiSelesai", JSON.stringify(selesai));
+    function tandaiSelesai(nomor, halamanBerikutnya) {
+        let selesai = JSON.parse(localStorage.getItem("materiSelesai") || "[]");
+        if (!selesai.includes(nomor)) {
+            selesai.push(nomor);
+            localStorage.setItem("materiSelesai", JSON.stringify(selesai));
+        }
+        alert("Materi 1 berhasil ditandai selesai!");
+        window.location.href = halamanBerikutnya;
     }
-
-    alert("Materi 1 berhasil ditandai selesai!");
-
-    window.location.href = halamanBerikutnya;
-}
-
     </script>
-
 
 </body>
 </html>

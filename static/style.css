@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -184,7 +183,6 @@ footer {
         font-size: 28px;
     }
 }
-
 
 /* ===== NAVBAR ===== */
 .navbar {
@@ -384,9 +382,7 @@ footer {
     }
 }
 
-
 /* ===== MODERN HERO DESIGN ===== */
-
 .navbar {
     background: linear-gradient(110deg, #5145cd, #9333ea, #b45af2);
     box-shadow: 0 5px 25px #5145cd20;
@@ -548,9 +544,7 @@ footer {
     }
 }
 
-
 /* ===== ROBOT AI ILLUSTRATION ===== */
-
 .robot-illustration {
     position: relative;
     height: 250px;
@@ -614,9 +608,7 @@ footer {
     }
 }
 
-
 /* ===== MODERN MATERI CARDS ===== */
-
 .materi-section {
     padding: 65px 35px;
     background: linear-gradient(180deg, #f5f3ff, #ffffff);
@@ -731,21 +723,14 @@ footer {
     }
 }
 
-
 /* ===== ABOUT SECTION MODERN ===== */
-
 .about-section {
     position: relative;
     overflow: hidden;
     text-align: center;
     padding: 65px 50px;
     border-radius: 25px;
-    background: linear-gradient(
-        120deg,
-        #ede9fe,
-        #f5d0fe,
-        #ffffff
-    );
+    background: linear-gradient(120deg, #ede9fe, #f5d0fe, #ffffff);
     border: 1px solid #ddd6fe;
 }
 
@@ -779,7 +764,6 @@ footer {
     line-height: 1.9;
 }
 
-/* KALIMAT PENUTUP */
 .about-highlight {
     display: inline-block;
     background: white;
@@ -791,7 +775,6 @@ footer {
 }
 
 /* ===== FOOTER MODERN ===== */
-
 footer {
     background: linear-gradient(120deg, #29205f, #5145cd, #7c3aed);
     color: white;
@@ -805,9 +788,7 @@ footer p {
     font-size: 14px;
 }
 
-
 /* ===== KEUNGGULAN BOOTCAMP ===== */
-
 .keunggulan-section {
     background: transparent;
     box-shadow: none;
@@ -856,9 +837,7 @@ footer p {
     }
 }
 
-
 /* ===== HALAMAN MATERI MODERN ===== */
-
 .halaman-materi {
     background: #f7f5ff;
 }
@@ -872,8 +851,6 @@ footer p {
 .materi-main section {
     box-shadow: none;
 }
-
-/* HERO MATERI */
 
 .materi-hero {
     display: flex;
@@ -976,8 +953,6 @@ footer p {
     font-size: 11px;
 }
 
-/* TUJUAN PEMBELAJARAN */
-
 .tujuan-card {
     display: flex;
     gap: 25px;
@@ -1010,8 +985,6 @@ footer p {
     margin-bottom: 8px;
     color: #625b80;
 }
-
-/* BAGIAN ISI MATERI */
 
 .isi-materi {
     background: transparent;
@@ -1079,8 +1052,6 @@ footer p {
     color: #5145cd;
 }
 
-/* ALUR KERJA AI */
-
 .alur-ai {
     display: grid;
     grid-template-columns: 1fr auto 1fr auto 1fr;
@@ -1121,8 +1092,6 @@ footer p {
     font-size: 25px;
     font-weight: bold;
 }
-
-/* CONTOH AI */
 
 .contoh-ai {
     display: grid;
@@ -1167,8 +1136,6 @@ footer p {
     font-size: 11px;
     font-weight: bold;
 }
-
-/* KUIS */
 
 .kuis-section {
     background: linear-gradient(145deg, #f5f3ff, #ede9fe);
@@ -1245,8 +1212,6 @@ footer p {
     color: #625b80;
 }
 
-/* NAVIGASI MATERI */
-
 .navigasi-materi {
     display: flex;
     justify-content: space-between;
@@ -1273,8 +1238,6 @@ footer p {
     color: white;
     background: linear-gradient(120deg, #5145cd, #a855f7);
 }
-
-/* RESPONSIVE */
 
 @media (max-width: 768px) {
     .materi-hero {
@@ -1322,9 +1285,7 @@ footer p {
     }
 }
 
-
 /* ===== PROGRES PEMBELAJARAN ===== */
-
 .progress-section {
     padding: 80px 8%;
     background: #f5f3ff;
@@ -1411,10 +1372,7 @@ footer p {
     }
 }
 
-
-
 /* ===== PREMIUM CERTIFICATE BOOTCAMP AI ===== */
-
 .sertifikat {
     max-width: 1000px;
     margin: 50px auto;
@@ -1541,46 +1499,6 @@ footer p {
     }
 
     .sertifikat-border {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        box-shadow: none;
-    }
-
-    @page {
-        size: landscape;
-        margin: 12mm;
-    }
-}
-
-
-@media print {
-    body {
-        background: white !important;
-    }
-
-    body * {
-        visibility: hidden;
-    }
-
-    #hasilSertifikat,
-    #hasilSertifikat * {
-        visibility: visible;
-    }
-
-    #hasilSertifikat {
-        display: block !important;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        margin: 0;
-    }
-
-    #hasilSertifikat .btn-kuis {
-        display: none !important;
-    }
-
-    .sertifikat-border {
         box-shadow: none;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -1592,9 +1510,7 @@ footer p {
     }
 }
 
-
 /* ===== NAVBAR EDUTECH BARU ===== */
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -1659,8 +1575,6 @@ footer p {
     box-shadow: 0 5px 15px #29145a30;
 }
 
-/* NAVBAR UNTUK HP */
-
 @media (max-width: 900px) {
     .navbar {
         flex-wrap: wrap;
@@ -1693,9 +1607,7 @@ footer p {
     }
 }
 
-
 /* ===== PROGRAM KERJA SAMA SEKOLAH ===== */
-
 .sekolah-section {
     display: flex;
     align-items: center;
@@ -1810,9 +1722,7 @@ footer p {
     }
 }
 
-
 /* ===== ARTIKEL AI ===== */
-
 .artikel-section {
     padding: 65px 35px;
     background: linear-gradient(180deg, #ffffff, #f5f3ff);
@@ -1952,9 +1862,7 @@ footer p {
     text-decoration: none;
 }
 
-
 /* HALAMAN REGISTER DAN LOGIN */
-
 .auth-section {
     min-height: 100vh;
     display: flex;
@@ -2026,9 +1934,7 @@ footer p {
     font-weight: bold;
 }
 
-
 /* ===== PENGEMBANGAN MATERI 6 ===== */
-
 #statusSalin {
     margin-top: 12px;
     color: #168653;
@@ -2090,9 +1996,7 @@ footer p {
     }
 }
 
-
 /* ===== PENGEMBANGAN MATERI 7 ===== */
-
 #namaKegiatan,
 #waktuKegiatan,
 #prioritasKegiatan {
@@ -2119,37 +2023,7 @@ footer p {
     line-height: 1.8;
 }
 
-#statusSalin {
-    margin-top: 12px;
-    color: #168653;
-    font-weight: bold;
-}
-
-#hasilNilai {
-    padding: 18px;
-    margin-top: 18px;
-    background: white;
-    border-radius: 14px;
-    line-height: 1.8;
-}
-
-@media (max-width: 600px) {
-    .materi-hero {
-        min-height: auto;
-    }
-
-    .materi-heading h2 {
-        font-size: 24px;
-    }
-
-    .kuis-section {
-        padding: 23px;
-    }
-}
-
-
 /* ===== PENGEMBANGAN MATERI 8 ===== */
-
 #judulProyek,
 #jenisProyek,
 #masalahProyek,
@@ -2190,31 +2064,7 @@ footer p {
     font-weight: bold;
 }
 
-#hasilNilai {
-    padding: 18px;
-    margin-top: 18px;
-    background: white;
-    border-radius: 14px;
-    line-height: 1.8;
-}
-
-@media (max-width: 600px) {
-    .materi-hero {
-        min-height: auto;
-    }
-
-    .materi-heading h2 {
-        font-size: 24px;
-    }
-
-    .kuis-section {
-        padding: 23px;
-    }
-}
-
-
 /* ===== PENGEMBANGAN MATERI 9 ===== */
-
 .pilihan-kasus {
     display: flex;
     flex-direction: column;
@@ -2262,35 +2112,7 @@ footer p {
     padding: 18px;
 }
 
-#hasilNilai {
-    padding: 18px;
-    margin-top: 18px;
-    background: white;
-    border-radius: 14px;
-    line-height: 1.8;
-}
-
-@media (max-width: 600px) {
-    .materi-hero {
-        min-height: auto;
-    }
-
-    .materi-heading h2 {
-        font-size: 24px;
-    }
-
-    .kuis-section {
-        padding: 23px;
-    }
-
-    .pilihan-kasus button {
-        font-size: 14px;
-    }
-}
-
-
 /* ===== PENGEMBANGAN MATERI 10 ===== */
-
 #namaPeserta,
 #namaKarya,
 #kategoriKarya,
@@ -2340,26 +2162,4 @@ footer p {
     margin-top: 12px;
     color: #168653;
     font-weight: bold;
-}
-
-#hasilNilai {
-    padding: 18px;
-    margin-top: 18px;
-    background: white;
-    border-radius: 14px;
-    line-height: 1.8;
-}
-
-@media (max-width: 600px) {
-    .materi-hero {
-        min-height: auto;
-    }
-
-    .materi-heading h2 {
-        font-size: 24px;
-    }
-
-    .kuis-section {
-        padding: 23px;
-    }
 }

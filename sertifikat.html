@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikat Bootcamp AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="halaman-materi">
+
+    <main class="materi-main">
+        <section class="tujuan-card">
+            <div>
+                <h1>🎓 Sertifikat Bootcamp AI</h1>
+                <p>Selamat! Kamu telah menyelesaikan seluruh materi pembelajaran.</p>
+
+                <label for="namaPeserta">Masukkan Nama Lengkap:</label>
+                <input type="text" id="namaPeserta"
+                    placeholder="Masukkan nama lengkap">
+
+                <button class="btn-kuis" onclick="buatSertifikat()">
+                    Buat Sertifikat
+                </button>
+            </div>
+        </section>
+
+        <section id="hasilSertifikat" class="sertifikat" style="display:none;">
+            <div class="sertifikat-border">
+               <div class="sertifikat-logo">
+    <div class="logo-icon">✦</div>
+    <span>BOOTCAMP <b>AI.</b></span>
+</div>
+
+<p class="sertifikat-label">CERTIFICATE OF COMPLETION</p>
+<h1>SERTIFIKAT</h1>
+                <h2>PENYELESAIAN PEMBELAJARAN</h2>
+
+                <p class="sertifikat-diberikan">Diberikan kepada:</p>
+                <h2 id="namaHasil" class="nama-sertifikat"></h2>
+
+               <p>
+                Sebagai bentuk apresiasi atas keberhasilan
+                menyelesaikan 10 materi pembelajaran Bootcamp AI.
+            </p>
+
+                <h3>Belajar, Berinovasi, Berkarya</h3>
+              <div class="sertifikat-footer">
+    <p class="sertifikat-tanggal" id="tanggalSertifikat"></p>
+    <p class="nomor-sertifikat" id="nomorSertifikat"></p>
+</div>
+            </div>
+
+            <button class="btn-kuis" onclick="window.print()">
+                Cetak / Simpan sebagai PDF
+            </button>
+        </section>
+    </main>
+
+    <script>
+        function buatSertifikat() {
+            let nama = document.getElementById("namaPeserta").value.trim();
+
+            if (nama === "") {
+                alert("Silakan masukkan nama terlebih dahulu!");
+                return;
+            }
+
+            let selesai = JSON.parse(
+                localStorage.getItem("materiSelesai") || "[]"
+            );
+
+           if ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10].some(nomor => !selesai.includes(nomor))) {
+    alert("Selesaikan seluruh 10 materi terlebih dahulu!");
+    return;
+}
+
+            document.getElementById("namaHasil").innerText = nama;
+
+            document.getElementById("tanggalSertifikat").innerText =
+                "Diterbitkan pada: " +
+                new Date().toLocaleDateString("id-ID", {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                });
+                
+            document.getElementById("nomorSertifikat").innerText =
+                "No. Sertifikat: BAI-" +
+                Date.now().toString().slice(-8);
+
+            document.getElementById("hasilSertifikat").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
